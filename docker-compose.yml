@@ -1,0 +1,12 @@
+services:
+  spam-scan:
+    build: .
+    container_name: imap-spam-scan
+    network_mode: "host"
+    user: "1000:1000"
+    volumes:
+      - ./imapSpamScan.pl:/opt/app/imapSpamScan.pl         # script Perl modifiable
+      - ./imapspamscan.db:/tmp/imapspamscan.db             # scandb persistante
+      - ~/.razor:/home/spam/.razor                         # Razor data persistante
+      - ~/.pyzor:/home/spam/.pyzor                         # Pyzor data persistante
+    entrypoint: ["perl", "/opt/app/imapSpamScan.pl"]
