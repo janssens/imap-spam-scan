@@ -23,13 +23,13 @@ Merci à David Maisonave pour le [script Perl](https://framagit.org/kepon/vrac/-
 ## 🧱 Structure du projet
 
 ```
-.
 ├── Dockerfile                # Image Debian + Perl + SpamAssassin + outils
 ├── docker-compose.yml        # Lancement de l'image avec montages
 ├── imapSpamScan.pl           # Script principal (modifiable depuis l'hôte)
 ├── imapspamscan.db           # Base SQLite persistante
 ├── spamassassin/             # Configs SpamAssassin (v310.pre, local.cf)
 └── README.md                 # this file
+```
 
 ---
 
