@@ -37,6 +37,3 @@ COPY spamassassin /etc/spamassassin
 
 # Répertoire de travail (où sera monté ton script)
 WORKDIR /opt/app
-
-# Volume pour la config SA
-VOLUME ["/etc/spamassassin"]
