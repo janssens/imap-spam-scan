@@ -175,7 +175,7 @@ if ( $client->IsAuthenticated() ) {
             } 
         }
         logEntry(7, "learning done"); 
-        logEntry(7, "lets check for unread spam on Inbox folder : ".$params->{imapspam}); 
+        logEntry(7, "lets check for unread spam on Inbox folder : ".$params->{imapinbox}); 
         $client->select($params->{imapinbox});
         for my $msg ( reverse $client->messages ) {  
             my @flags   = $client->flags( $msg ) ;  
