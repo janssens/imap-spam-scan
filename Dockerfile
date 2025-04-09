@@ -33,7 +33,7 @@ RUN mkdir -p /home/spam/.razor /home/spam/.pyzor
 RUN razor-admin -create && razor-admin -register && pyzor discover
 
 # Copie config SA
-COPY spamassassin /etc/spamassassin
+COPY spamassassin/* /etc/spamassassin/
 
 # Répertoire de travail (où sera monté ton script)
 WORKDIR /opt/app
